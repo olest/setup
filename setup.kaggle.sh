@@ -4,16 +4,16 @@
 
 sudo apt-get update
 
-sudo apt-get install g++
-sudo apt-get install octave
+sudo apt-get -y install g++
+sudo apt-get -y install octave
 
 # python essentials
-sudo apt-get install python
-sudo apt-get install python-scipy
-sudo apt-get install python-numpy
+sudo apt-get -y install python
+sudo apt-get -y install python-scipy
+sudo apt-get -y install python-numpy
 
 # R stuff
-sudo apt-get install r-base-core
+sudo apt-get -y install r-base-core
 wget http://cran.r-project.org/src/contrib/randomForest_4.6-7.tar.gz
 R CMD INSTALL randomForest_4.6-7.tar.gz
 
