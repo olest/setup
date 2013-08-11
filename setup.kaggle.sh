@@ -2,18 +2,25 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # installs typical tools needed for kaggle competitions
 
-sudo apt-get update
+sudo apt-get -q -y update
 
-sudo apt-get -y install g++
-sudo apt-get -y install octave
+sudo apt-get -q -y install g++
+sudo apt-get -q -y install libgsl0-dev
+sudo apt-get -q -y install libboost-dev
+
+sudo apt-get -q -y install octave
 
 # python essentials
-sudo apt-get -y install python
-sudo apt-get -y install python-scipy
-sudo apt-get -y install python-numpy
+sudo apt-get -q -y install python
+sudo apt-get -q -y install python-scipy
+sudo apt-get -q -y install python-numpy
+wget https://pypi.python.org/packages/source/o/oct2py/oct2py-0.4.0.tar.gz
+tar xzvf oct2py-0.4.0.tar.gz
+cd oct2py-0.4.0.tar.gz
+
 
 # R stuff
-sudo apt-get -y install r-base-core
+sudo apt-get -q -y install r-base-core
 wget http://cran.r-project.org/src/contrib/randomForest_4.6-7.tar.gz
 R CMD INSTALL randomForest_4.6-7.tar.gz
 
