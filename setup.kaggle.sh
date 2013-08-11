@@ -26,7 +26,9 @@ R CMD INSTALL randomForest_4.6-7.tar.gz
 
 # cause effect data and git repo
 #wget http://mlg.eng.cam.ac.uk/lloyd/temp/raw.tar.gz
-git clone https://github.com/jamesrobertlloyd/cause-effect.git
+if [ ! -d cause-effect ]; then
+    git clone https://github.com/jamesrobertlloyd/cause-effect.git
+fi
 
 # git pull and install dotfiles as well
 cd $HOME
@@ -37,10 +39,10 @@ if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
 
-#git clone https://github.com/startup-class/dotfiles.git
-#ln -sb dotfiles/.screenrc .
-#ln -sb dotfiles/.bash_profile .
-#ln -sb dotfiles/.bashrc .
-#ln -sb dotfiles/.bashrc_custom .
-#ln -sf dotfiles/.emacs.d .
+git clone https://github.com/startup-class/dotfiles.git
+ln -sb dotfiles/.screenrc .
+ln -sb dotfiles/.bash_profile .
+ln -sb dotfiles/.bashrc .
+ln -sb dotfiles/.bashrc_custom .
+ln -sf dotfiles/.emacs.d .
 
