@@ -9,6 +9,7 @@ sudo apt-get -q -y install libgsl0-dev
 sudo apt-get -q -y install libboost-dev
 
 sudo apt-get -q -y install octave
+sudo apt-get -q -y install octave3.2-headers
 
 # python essentials
 sudo apt-get -q -y install python
