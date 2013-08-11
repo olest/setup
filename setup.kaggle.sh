@@ -16,13 +16,12 @@ sudo apt-get -q -y install python-scipy
 sudo apt-get -q -y install python-numpy
 wget https://pypi.python.org/packages/source/o/oct2py/oct2py-0.4.0.tar.gz
 tar xzvf oct2py-0.4.0.tar.gz
-cd oct2py-0.4.0.tar.gz
 
 
 # R stuff
 sudo apt-get -q -y install r-base-core
 wget http://cran.r-project.org/src/contrib/randomForest_4.6-7.tar.gz
-R CMD INSTALL randomForest_4.6-7.tar.gz
+sudo R CMD INSTALL randomForest_4.6-7.tar.gz
 
 # cause effect data and git repo
 #wget http://mlg.eng.cam.ac.uk/lloyd/temp/raw.tar.gz
